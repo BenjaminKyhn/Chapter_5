@@ -1,24 +1,26 @@
+import java.util.Scanner;
+
 public class Listing_5_9 {
-    //Main method
+    /**Main method*/
     public static void main(String[] args) {
-        //Display the table heading
-        System.out.println("          Multiplication Table");
+        //Create a scanner
+        Scanner input = new Scanner(System.in);
 
-        //Display the number title
-        System.out.print("    ");
-        for (int j = 1; j<=9; j++)
-            System.out.print("   " + j);
+        //Prompt the user to enter two integers
+        System.out.println("Enter first integer: ");
+        int n1 = input.nextInt();
+        System.out.println("Enter second integer: ");
+        int n2 = input.nextInt();
 
-        System.out.println("\n— — — — — — — — — — — — — — — —— — — — —");
-
-        //Display table body
-        for (int i = 1; i<=9; i++){
-            System.out.print(i + " | ");
-            for (int j = 1; j<=9; j++){
-                //Display the product and align properly
-                System.out.printf("%4d", i * j);
-            }
-            System.out.println();
+        int gcd = 1; //Initial gcd is 1
+        int k = 2; //Possible gcd
+        while (k <= n1 && k <= n2){
+            if (n1 % k == 0 && n2 % k == 0)
+                gcd = k; //Update gcd
+            k++;
         }
+
+        System.out.println("The greatest common divisor for " + n1 + " and " + n2 + " is " + gcd);
+
     }
 }
