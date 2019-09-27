@@ -12,12 +12,15 @@ public class Listing_5_9 {
         System.out.println("Enter second integer: ");
         int n2 = input.nextInt();
 
-        int gcd = 1; //Initial gcd is 1
-        int k = 2; //Possible gcd
-        while (k <= n1 && k <= n2){
-            if (n1 % k == 0 && n2 % k == 0)
-                gcd = k; //Update gcd
-            k++;
+        //Make gcd the minimum of n1 and n2
+        int gcd;
+        if (n1 > n2)
+            gcd = n2;
+        else gcd = n1;
+
+        //Test each number lower than the minimum until the greatest common divisor is found
+        while (n1 % gcd != 0 && n2 % gcd != 0){
+            gcd--;
         }
 
         System.out.println("The greatest common divisor for " + n1 + " and " + n2 + " is " + gcd);
