@@ -24,7 +24,7 @@ public class Exercise_5_15 {
                 if (count % 10 == 0)
                     System.out.println((char)j);
                 else
-                    System.out.print((char)j + " ");
+                    System.out.print((char) j + " ");
             }
             System.out.println();
         }
