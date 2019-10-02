@@ -1,19 +1,13 @@
-import java.util.Scanner;
-
-public class Exercise_5_17 {
+public class Exercise_5_17{
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        /*
-        System.out.println("Enter number of lines: ");
-        int numberOfLines = input.nextInt();
-         */
-
-        // Pyramid
-        System.out.println("\nPattern B");
-        for (int rows = 7; rows <= 7 && rows > 0; rows--){
-            for (int cols = 1; cols <= rows; cols++) {
-                System.out.print(cols);
+        int number = 7;
+        for (int i = number; i >= 1; i--) {
+            //System.out.println(i);
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+            for (int k = 2; k <= i; k++) {
+                System.out.print(k + " ");
             }
             System.out.println();
         }

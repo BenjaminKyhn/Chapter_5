@@ -7,9 +7,12 @@ public class Exercise_5_48 {
         String s = input.nextLine();
 
         int count = 1;
-        while (count < s.length()){
-            System.out.print(s.charAt(count));
-            count = count+2;
+        while (count < s.length()) {
+            if (s.charAt(count) != ' ') {
+                System.out.print(s.charAt(count));
+            }
+            count = count + 2;
+
         }
     }
 }
