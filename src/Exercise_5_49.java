@@ -6,6 +6,7 @@ public class Exercise_5_49 {
         System.out.println("Enter a string: ");
         String s = input.nextLine();
         String sIgnore = s.toLowerCase();
+        String sConsonants = s.trim();
 
         int numberOfVowels = 0;
         for (int i = 0; i < s.length() ; i++) {
@@ -20,6 +21,7 @@ public class Exercise_5_49 {
                 numberOfVowels++;
         }
 
-        System.out.println(numberOfVowels);
+        System.out.println("The number of vowels is " + numberOfVowels);
+        System.out.println("The number of consonants is " + (sConsonants.length()-numberOfVowels));
     }
 }
